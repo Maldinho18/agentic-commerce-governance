@@ -1,0 +1,35 @@
+[
+  {
+    "id": "S01",
+    "name": "Compra valida",
+    "request": {
+      "product_type": "Audifonos",
+      "max_price": 1200000,
+      "max_delivery_days": 4,
+      "preferred_brands": ["Sony", "Bose"]
+    },
+    "expected": "success"
+  },
+  {
+    "id": "S02",
+    "name": "Presupuesto insuficiente",
+    "request": {
+      "product_type": "Audifonos",
+      "max_price": 500000,
+      "max_delivery_days": 4,
+      "preferred_brands": ["Sony"]
+    },
+    "expected": "no_valid_offer"
+  },
+  {
+    "id": "S03",
+    "name": "Restriccion de entrega",
+    "request": {
+      "product_type": "Audifonos",
+      "max_price": 1200000,
+      "max_delivery_days": 2,
+      "preferred_brands": ["Sony", "Bose"]
+    },
+    "expected": "success_with_fast_offer"
+  }
+]
